@@ -59,12 +59,12 @@
         <div class="container-fluid header bg-white p-0">
             <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
                 <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">Advertise with Us</h1> 
+                    <h1 class="display-5 animated fadeIn mb-4">Entrust Your Property With Us</h1> 
                         <nav aria-label="breadcrumb animated fadeIn">
                         <ol class="breadcrumb text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
-                            <li class="breadcrumb-item text-body active" aria-current="page">Advertise</li>
+                            <li class="breadcrumb-item text-body active" aria-current="page">Manage Property</li>
                         </ol>
                     </nav>
                 </div>
@@ -77,36 +77,49 @@
 
         <!-- Advertise Body-->
 
-        <h3>Fill In your Details</h3>
+        <h3>Fill In the Details of the Property</h3>
         <div class="container" > 
             <div class="form-container">
                 <h1>Property Details</h1>
                 <form id="propertyForm">
-                  <label for="name">Name of Seller:</label>
+                  <label for="name">Name of Owner:</label>
                   <input type="text" id="name" name="name" placeholder='Please enter your name' required>
             
-                  <label>Property Category:</label>
+                  <label>Select Action</label>
                   <div class="radio-group">
-                    <label><input type="radio" name="category" value="Rentals" required>Rentals</label>
-                    <label><input type="radio" name="category" value="House" required>House</label>
-                    <label><input type="radio" name="category" value="Apartments" required>Apartments</label>
-                    <label><input type="radio" name="category" value="Land" required>Land</label>
+                    <label><input type="radio" name="option" value="ForSale" id="saleRadio" required>For Sale</label>
+                    <label><input type="radio" name="option" value="ForRent" id="rentRadio" required>For Rent</label>
                   </div>
             
-                  <label for="details">Property Details:</label>
+                  <label for="propertyName">Property Name:</label>
+                  <input type="text" id="propertyName" name="propertyName" placeholder='Please enter property name' required>
+            
+                  <label for="details">Property Description:</label>
                   <textarea id="details" name="details" rows="4" placeholder='Please talk about your property' required></textarea>
             
                   <label for="pictures">Upload Pictures:</label>
                   <input type="file" id="pictures" name="pictures" accept="image/*" multiple required>
             
                   <label for="location">Property Location:</label>
-                  <input type="text" id="location" name="location" placeholder='Please enter the location of the property' required>
+                  <input type="text" id="location" name="location" placeholder='Location of property' required>
+
+                  <div id='forSell'>
+                    <label for="location">Desired Price</label>
+                    <input type="text" id="sellInput" name="price" placeholder='UGX' required>
+                  </div>
+
+                  <div id='forRent'>
+                    <label for="location">Desired Monthly Payment</label>
+                    <input type="text" id="rentInput" name="rent" placeholder='UGX' required>
+                  </div>
             
                   <label for="email">Email Address:</label>
                   <input type="email" id="email" name="email" placeholder='Email address' required>
             
                   <label for="contact">Contact Number:</label>
                   <input type="tel" id="contact" name="contact" placeholder='Phone number' required>
+
+                  <p id="optionSelected"></p>
             
                   <button>
                       <span>Upload</span>
@@ -217,6 +230,7 @@
     <!-- Template Javascript -->
     <script src=" {% static 'js/main.js'%}"></script>
     <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/manageProperty.js' %}"></script>
 </body>
 
 </html>
