@@ -13,6 +13,12 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def advertise(request):
+    return render(request, 'advertise.html')
+                  
+def manageProperty(request):
+    return render(request, 'manageProperty.html')
+
 def property(request):
     return render(request, 'property.html')
 
