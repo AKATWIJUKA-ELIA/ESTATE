@@ -40,7 +40,7 @@
   </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+    <div class="container-fluid bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -62,8 +62,7 @@
                     <h1 class="display-5 animated fadeIn mb-4">Advertise with Us</h1> 
                         <nav aria-label="breadcrumb animated fadeIn">
                         <ol class="breadcrumb text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
                             <li class="breadcrumb-item text-body active" aria-current="page">Advertise</li>
                         </ol>
                     </nav>
@@ -81,35 +80,38 @@
         <div class="container" > 
             <div class="form-container">
                 <h1>Property Details</h1>
-                <form id="propertyForm">
-                  <label for="name">Name of Seller:</label>
-                  <input type="text" id="name" name="name" required>
-            
-                  <label>Property Category:</label>
-                  <div class="radio-group">
-                    <label><input type="radio" name="category" value="Residential" required>Rentals</label>
-                    <label><input type="radio" name="category" value="Commercial" required>House</label>
-                    <label><input type="radio" name="category" value="Land" required>Apartments</label>
+                <form id="propertyForm" class="flex-column">
+                 <div class="flex">
+                        <label for="name">Name of Seller:</label>
+                        <input type="text" id="name" name="name" required>
+                  
+                        <label>Property Category:</label>
+                        <div class="radio-group">
+                        <label><input type="radio" name="category" value="Residential" required>Rentals</label>
+                        <label><input type="radio" name="category" value="Commercial" required>House</label>
+                        <label><input type="radio" name="category" value="Land" required>Apartments</label>
+                        </div>
+                  
+                        <label for="propertyName">Property Name:</label>
+                        <input type="text" id="propertyName" name="propertyName" required>
+                  
+                        <label for="details">Property Details:</label>
+                        <textarea id="details" name="details" rows="4" required></textarea>
+                  
+                        <label for="pictures">Upload Pictures:</label>
+                        <input type="file" id="pictures" name="pictures" accept="image/*" multiple required>
+                 </div>     
+                 
+                  <div class="flex">
+                        <label for="location">Property Location:</label>
+                        <input type="text" id="location" name="location" required>
+                  
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                  
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" required>
                   </div>
-            
-                  <label for="propertyName">Property Name:</label>
-                  <input type="text" id="propertyName" name="propertyName" required>
-            
-                  <label for="details">Property Details:</label>
-                  <textarea id="details" name="details" rows="4" required></textarea>
-            
-                  <label for="pictures">Upload Pictures:</label>
-                  <input type="file" id="pictures" name="pictures" accept="image/*" multiple required>
-            
-                  <label for="location">Property Location:</label>
-                  <input type="text" id="location" name="location" required>
-            
-                  <label for="email">Email Address:</label>
-                  <input type="email" id="email" name="email" required>
-            
-                  <label for="contact">Contact Number:</label>
-                  <input type="tel" id="contact" name="contact" required>
-            
                   <button>
                       <span>Upload</span>
                       <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
