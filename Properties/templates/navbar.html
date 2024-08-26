@@ -24,7 +24,7 @@
 
             <div class="navbar-nav ms-auto">
                   {% comment %} <a id="home" href="{% url 'index' %}" class="nav-item nav-link" >Home</a> {% endcomment %}
-                  <a href="contact.html" class="nav-item nav-link">Manage Rentals</a>
+                  <a href="{% url 'manageProperty' %}" class="nav-item nav-link">Manage Property</a>
                   <a href="{% url 'advertise' %}" class="nav-item nav-link">Advertise</a>
                   <a href="contact.html" class="nav-item nav-link">Help</a>
               </div>
