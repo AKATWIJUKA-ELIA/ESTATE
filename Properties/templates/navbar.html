@@ -6,10 +6,10 @@
       <div class=" container-fluidcollapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 {% comment %} <a id="home" href="{% url 'index' %}" class="nav-item nav-link" >Home</a> {% endcomment %}
-                <a href="contact.html" class="nav-item nav-link">Buy</a>
-                <a href="contact.html" class="nav-item nav-link">Sell</a>
-                <a href="contact.html" class="nav-item nav-link">Rent</a>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="" class="nav-item nav-link">Buy</a>
+                <a href="" class="nav-item nav-link">Sell</a>
+                <a href="" class="nav-item nav-link">Rent</a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
             </div>
 
             <!--############ M I D D L E   L O G O   ############ -->
@@ -24,11 +24,11 @@
 
             <div class="navbar-nav ms-auto">
                   {% comment %} <a id="home" href="{% url 'index' %}" class="nav-item nav-link" >Home</a> {% endcomment %}
-                  <a href="contact.html" class="nav-item nav-link">Manage Rentals</a>
-                  <a href="contact.html" class="nav-item nav-link">Advertise</a>
+                  <a href="{% url 'manageProperty' %}" class="nav-item nav-link">Manage Property</a>
+                  <a href="{% url 'advertise' %}" class="nav-item nav-link">Advertise</a>
                   <a href="contact.html" class="nav-item nav-link">Help</a>
               </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Sign In</a>
+            <a href="{% url 'sign_in' %}" class="btn btn-primary px-3 d-none d-lg-flex">Sign In</a>
         </div>
 
         
